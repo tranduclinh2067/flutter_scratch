@@ -24,6 +24,53 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: _buildBottomNavigationBar(),
+      // https://www.youtube.com/watch?v=JBi6egHotVY&t=14s
+      // 8:16
+    );
+  }
+
+  BottomNavigationBar _buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: kBackground,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      items: [
+        BottomNavigationBarItem(
+          label: 'Trang chủ',
+          icon: Container(
+            padding: EdgeInsets.only(bottom: 5),
+            decoration: BoxDecoration(
+                border: Border(bottom: BorderSide(color: kAccent, width: 2))),
+            child: Text(
+              'Trang chủ',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+        BottomNavigationBarItem(
+          label: 'Lịch',
+          icon: Image.asset(
+            'assets/icons/calendar.png',
+            width: 30,
+          ),
+        ),
+        BottomNavigationBarItem(
+          label: 'Lưu trữ',
+          icon: Image.asset(
+            'assets/icons/bookmark.png',
+            width: 30,
+          ),
+        ),
+        BottomNavigationBarItem(
+          label: 'Người dùng',
+          icon: Image.asset(
+            'assets/icons/user.png',
+            width: 30,
+          ),
+        ),
+      ],
     );
   }
 
