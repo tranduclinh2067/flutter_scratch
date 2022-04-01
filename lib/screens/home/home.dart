@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scratch/constants/colors.dart';
+import 'package:flutter_scratch/screens/home/Widget/active_course.dart';
 import 'package:flutter_scratch/screens/home/Widget/emoji_text.dart';
 import 'package:flutter_scratch/screens/home/Widget/feature_course.dart';
 import 'package:flutter_scratch/screens/home/Widget/search_input.dart';
@@ -15,7 +16,12 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
-          children: [EmojiText(), SearchInput(), FeatureCourse()],
+          children: [
+            EmojiText(),
+            SearchInput(),
+            FeatureCourse(),
+            ActiveCourse()
+          ],
         ),
       ),
     );
